@@ -3,7 +3,7 @@ zuul:
   routes:
     api-a:
       ### 以 /api-member/访问转发到会员服务
-      path: /api1-member/**
+      path: /api-member/**
       serviceId: eureka-member
     api-b:
       ### 以 /api-order/访问转发到订单服务
