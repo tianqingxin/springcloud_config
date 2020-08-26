@@ -68,11 +68,11 @@ eureka:
     #    是否将自身注册到eureka
     register-with-eureka: true
   instance:
-    hostname: 127.0.0.1
+     hostname: 127.0.0.1
     #    客户端发送心跳的间隔时间，默认为30s
-    lease-renewal-interval-in-seconds: 30
+     lease-renewal-interval-in-seconds: 30
     #    最后一次心跳后等待多久后注册中心剔除该服务,默认90s
-    lease-expiration-duration-in-seconds: 90
+     lease-expiration-duration-in-seconds: 90
 
 swagger:
   base-package: com.lingtu
