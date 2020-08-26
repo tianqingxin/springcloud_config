@@ -40,7 +40,7 @@ zuul:
       ### 以 /api-user/访问转发到用户相关接口
       path: /api-user/**
       serviceId: user-manager-service
-    api-driver:
+    #api-driver:
       ### 以 /api-driver/访问转发到司机相关接口
-      path: /api-driver/**
-      serviceId: driver-manager-service
+     # path: /api-driver/**
+      #serviceId: driver-manager-service
