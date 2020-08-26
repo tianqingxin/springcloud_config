@@ -8,7 +8,7 @@ spring:
   datasource:
     username: tqx
     password: tqx19911104!
-    url: jdbc:postgresql://pgm-2ze9g0cn0e4hrqqh7o.pg.rds.aliyuncs.com:1921/test
+    jdbc-url: jdbc:postgresql://pgm-2ze9g0cn0e4hrqqh7o.pg.rds.aliyuncs.com:1921/test
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: org.postgresql.Driver
 
