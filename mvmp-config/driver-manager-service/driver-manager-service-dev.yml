@@ -80,3 +80,6 @@ management:
       exposure:
         # * 代表所有暴露所有端点,如果暴漏多个用,隔开
         include: "*"
+
+test:
+  test: 田庆新
