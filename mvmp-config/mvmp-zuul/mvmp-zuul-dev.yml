@@ -10,6 +10,11 @@ eureka:
 spring:
   application:
     name: mvmp-zuul
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 123.57.13.249
+    port: 5672
 #  cloud:
 #    config:
 #      ####读取后缀
