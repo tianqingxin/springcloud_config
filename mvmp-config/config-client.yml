@@ -1,13 +1,20 @@
+spring:
+ profiles:
+  active:
+  - dev
+---
 server:
-  port: 8778
+ port: 8001
 
-server-eureka:
-  address-ip: 127.0.0.1
+spring:
+ profiles: dev #开发模式
+ application:
+  name: springcloud-config-dept-client
 
 eureka:
   client:
     service-url:
-      defaultZone: http://${server-eureka.address-ip}:9999/eureka/
+      defaultZone: http://127.0.0.1:9999/eureka/
     #    是否获取当前服务的信息
     fetch-registry: true
     #    是否将自身注册到eureka
