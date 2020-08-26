@@ -1,0 +1,45 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka/
+    #    是否获取当前服务的信息
+    fetch-registry: true
+    #    是否将自身注册到eureka
+    register-with-eureka: true
+  instance:
+    hostname: 127.0.0.1
+    #    客户端发送心跳的间隔时间，默认为30s
+    lease-renewal-interval-in-seconds: 30
+    #    最后一次心跳后等待多久后注册中心剔除该服务,默认90s
+    lease-expiration-duration-in-seconds: 90
+
+spring:
+  application:
+    name: driver-manager-service
+  #消息总线配置
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 123.57.13.249
+    port: 5672
+
+feign:
+  hystrix:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 5000 # feign 的超时设置
+        readTimeout: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # * 代表所有暴露所有端点,如果暴漏多个用,隔开
+        include: "*"
