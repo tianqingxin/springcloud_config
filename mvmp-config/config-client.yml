@@ -40,5 +40,5 @@ spring:
     port: 5672
 
 servers:
- user: 田庆新
+  user: 田庆新
   
