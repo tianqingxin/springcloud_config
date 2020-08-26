@@ -9,7 +9,7 @@ server:
 spring:
  profiles: dev #开发模式
  application:
-  name: springcloud-config-dept-client
+  name: config-client
 
 eureka:
   client:
