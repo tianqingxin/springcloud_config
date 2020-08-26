@@ -14,6 +14,8 @@ eureka:
     lease-expiration-duration-in-seconds: 90
 
 spring:
+  profiles:
+    active: dev
   application:
     name: driver-manager-service
   #消息总线配置
