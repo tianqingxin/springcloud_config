@@ -2,7 +2,7 @@ server:
  port: 8002
 
 spring:
- profiles: dev #开发模式
+ profiles: test #开发模式
  application:
   name: config-client
  cloud:
