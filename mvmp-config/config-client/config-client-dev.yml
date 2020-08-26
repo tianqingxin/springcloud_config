@@ -1,0 +1,37 @@
+server:
+ port: 8001
+
+spring:
+ profiles: dev #开发模式
+ application:
+  name: config-client
+ cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+ rabbitmq:
+    username: guest
+    password: guest
+    host: 123.57.13.249
+    port: 5672
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9999/eureka/
+    #    是否获取当前服务的信息
+    fetch-registry: true
+    #    是否将自身注册到eureka
+    register-with-eureka: true
+  instance:
+    hostname: 127.0.0.1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+servers:
+  user: 田庆新
