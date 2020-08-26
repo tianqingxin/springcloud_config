@@ -1,0 +1,67 @@
+spring:
+  #    对对象的过滤规则：这里设置为不为null的数据返回
+  jackson:
+    default-property-inclusion: non_null
+
+#  postgresql数据源配置
+  datasource:
+    username: tqx
+    password: tqx19911104!
+    url: jdbc:postgresql://pgm-2ze9g0cn0e4hrqqh7o.pg.rds.aliyuncs.com:1921/test
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: org.postgresql.Driver
+
+# ###################   mysql数据源####################
+#  datasource:
+#    username: root
+#    password: 123456a!
+#    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+    # ============================== druid 数据库连接池配置============================== #
+    druid:
+      #最大活跃数
+      maxActive: 20
+      #初始化数量
+      initialSize: 1
+      #最大连接等待超时时间
+      maxWait: 60000
+      #打开PSCache，并且指定每个连接PSCache的大小
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      #通过connectionProperties属性来打开mergeSql功能；慢SQL记录
+      #connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+#      validationQuery: select 1 from dual
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      #配置监控统计拦截的filters，去掉后监控界面sql将无法统计,'wall'用于防火墙
+#      filters: stat, wall, log4j
+  application:
+    name: user-manager-service
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  config-location: classpath:mybatis-config.xml
+#  type-aliases-package: com.lingtu.entity
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9999/eureka/
+    #    是否获取当前服务的信息
+    fetch-registry: true
+    #    是否将自身注册到eureka
+    register-with-eureka: true
+  instance:
+    hostname: 127.0.0.1
+    #    客户端发送心跳的间隔时间，默认为30s
+    lease-renewal-interval-in-seconds: 30
+    #    最后一次心跳后等待多久后注册中心剔除该服务,默认90s
+    lease-expiration-duration-in-seconds: 90
+
+swagger:
+  base-package: com.lingtu
