@@ -2,7 +2,7 @@ spring:
   #    对对象的过滤规则：这里设置为不为null的数据返回
   jackson:
     default-property-inclusion: non_null
-
+  profiles: dev #开发模式
 #  postgresql数据源配置
   datasource:
     username: tqx
