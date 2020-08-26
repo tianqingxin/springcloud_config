@@ -42,6 +42,17 @@ spring:
 #      filters: stat, wall, log4j
   application:
     name: user-manager-service
+#消息总线配置
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 123.57.13.249
+    port: 5672
 
 mybatis:
   mapper-locations: classpath:mapping/*.xml
@@ -65,3 +76,10 @@ eureka:
 
 swagger:
   base-package: com.lingtu
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # * 代表所有暴露所有端点,如果暴漏多个用,隔开
+        include: "*"
