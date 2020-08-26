@@ -38,4 +38,7 @@ spring:
     password: guest
     host: 123.57.13.249
     port: 5672
+
+servers:
+ user: 田庆新
   
